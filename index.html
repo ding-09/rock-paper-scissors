@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+    <script>
+        // function to generate random computer choice 
+        function computerPlay() {
+            const rpsOptions = ["Rock", "Paper", "Scissors"];
+            let randomIndex = Math.floor(Math.random() * Math.floor(3));
+            let computerChoice = rpsOptions[randomIndex];
+            return computerChoice;
+        }
+        
+        // function to determine the winner and display the result
+        function playRound(playerSelection, computerSelection) {
+            winner = determineWinner(playerSelection, computerSelection);
+            return winner;
+        }
+
+        // helper function to determine the winner
+        function determineWinner(playerSelection, computerSelection) {
+            let winner; g
+            switch (computerSelection) {
+                case "Rock": 
+                    if (playerSelection.toLowerCase() == "paper") {
+                        winner = "User";
+                    } else if (playerSelection.toLowerCase() == "scissors") {
+                        winner = "Computer";
+                    } else {
+                        winner = null;
+                    }
+                    break; 
+                case "Paper":
+                    if (playerSelection.toLowerCase() == "rock") {
+                        winner = "Computer";
+                    } else if (playerSelection.toLowerCase() == "scissors") {
+                        winner = "User";
+                    } else {
+                        winner = null;
+                    }
+                    break;
+                case "Scissors": 
+                    if (playerSelection.toLowerCase() == "rock") {
+                        winner = "User";
+                    } else if (playerSelection.toLowerCase() == "paper") {
+                        winner = "Computer";
+                    } else {
+                        winner = null; 
+                    }
+                    break;
+            }
+            return winner;
+        }
+
+        // calls playRound to play multiple rounds in one game
+        function game() {   
+            // declare and initialize variables to keep score for final winner 
+            let userScore = 0; 
+            let computerScore = 0; 
+
+            // for loop to play multiple rounds and keeps score
+            for (i = 0; i < 5; i++) {
+                // prompt user for input 
+                let playerSelection = prompt("Rock, paper, or scissors?");
+
+                // store random computer choice in a variable
+                let computerSelection = computerPlay();
+                
+                let winner = playRound(playerSelection, computerSelection); 
+                if (winner == "User") {
+                    alert(`The computer picked ${computerSelection.toLowerCase()}. User wins this round!`);
+                    userScore++;
+                } else if (winner == "Computer") {
+                    alert(`The computer picked ${computerSelection.toLowerCase()}. Computer wins this round!`);
+                    computerScore++;
+                } else { alert(`The computer picked ${computerSelection.toLowerCase()}. It's a tie!`);}
+
+                alert(`The score is User:${userScore}-Computer:${computerScore}`);
+            }
+            if (userScore > computerScore) {
+                alert("User wins!");
+            } else if (userScore < computerScore) {
+                alert("Computer wins!");
+            } else {
+                alert("It's a tie!");
+            }
+        }
+        console.log(game());
+    </script>
+</body>
+</html>
