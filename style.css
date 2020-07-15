@@ -1,0 +1,56 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+img {
+    display: block; 
+    width: 204px; 
+    height: 200px;
+}
+
+button {
+    border: none;
+    outline: none;
+    display: block;
+}
+
+#flex-container {
+    display: flex; 
+    flex-flow: row nowrap;
+    z-index: 1;
+}
+
+.humanPlayer, .computerPlayer {
+    flex-grow: 1;
+    height: 100vh;
+}
+
+.humanPlayer { 
+    background-color: #AED6F1;
+}
+
+.humanPlayer img {
+    background-color: #AED6F1;
+}
+
+.humanPlayer button {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.computerPlayer {
+    background-color: #E8DAEF;
+}
+
+.computerPlayer img {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+
