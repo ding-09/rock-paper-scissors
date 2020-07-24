@@ -10,33 +10,35 @@
 </head>
 <body>
     <div class="scoreboard">
-        <h1>Round 1/5 </h1>
         <div class="scores">
-            <p id="player">0</p>
-            <p id="computer">0</p>
+            <p id="player-score">0</p>
+            <p id="comp-score">0</p>
+        </div>
+        <div class="info">
+            <p id="display-info"></p>
         </div>
     </div>
     <main id="flex-container">   
         <div class="humanPlayer">
-            <button id="rock">
-                <img src="rock-left.png" alt="image of rock in rock-paper-scissors" class="rock-img">
+            <button>
+                <img id="rock" src="rock-left.png" alt="image of rock in rock-paper-scissors">
             </button>
-            <button id="paper">
-                <img src="paper-left.png" alt="image of paper in rock-paper-scissors">
+            <button>
+                <img id="paper" src="paper-left.png" alt="image of paper in rock-paper-scissors">
             </button>
-            <button id="paper">
-                <img src="scissors-left.png" alt="image of scissors in rock-paper-scissors">
+            <button>
+                <img id="scissors" src="scissors-left.png" alt="image of scissors in rock-paper-scissors">
             </button>
         </div>
         <div class="computerPlayer">
-            <div id="rockComputer"> 
-                <img src="rock-right.png" alt="image of rock in rock-paper-scissors">
+            <div class="computer-choice"> 
+                <img id="computer-rock" src="rock-right.png" alt="image of rock in rock-paper-scissors">
             </div>
-            <div id="paperComputer">
-                <img src="paper-right.png" alt="image of paper in rock-paper-scissors">
+            <div class="computer-choice">
+                <img id="computer-paper" src="paper-right.png" alt="image of paper in rock-paper-scissors">
             </div>
-            <div id="scissorsComputer">
-                <img src="scissors-right.png" alt="image of scissors in rock-paper-scissors">
+            <div class="computer-choice">
+                <img id="computer-scissors" src="scissors-right.png" alt="image of scissors in rock-paper-scissors">
             </div>
         </div>
     </main>
